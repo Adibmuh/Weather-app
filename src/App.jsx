@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import WeatherCard from './components/WeatherCard';
-import { fetchWeatherByCity } from './services/weatherAPI';
+import WeatherCard from './components/WeatherCard.jsx';
+import { fetchWeatherByCity } from './services/weatherAPI.js';
 
 export default function App() {
     const [city, setCity] = useState('');
