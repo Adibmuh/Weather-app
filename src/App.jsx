@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import WeatherCard from './components/WeatherCard';
 import { fetchWeatherByCity } from './services/weatherAPI';
@@ -12,10 +13,10 @@ export default function App() {
         if (!city) return;
         setLoading(true);
         setError(null);
+
         try {
             const data = await fetchWeatherByCity(city);
             setWeather(data);
-        // eslint-disable-next-line no-unused-vars
         } catch (err) {
             setError('City not found or API error');
         } finally {
